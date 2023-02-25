@@ -7,7 +7,7 @@ var errors = [];
 router.get('/products', helpers.loginChecker, function (req, res, next) {
 
   res.render('products', {
-    title: 'Products from AppServer1'
+    title: 'Products from AppServer2'
   });
 
 });
