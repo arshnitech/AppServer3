@@ -7,7 +7,7 @@ var errors = [];
 router.get('/products', helpers.loginChecker, function (req, res, next) {
 
   res.render('products', {
-    title: 'Products'
+    title: 'Products from AppServer1'
   });
 
 });
@@ -46,7 +46,7 @@ router.post('/products', function (req, res, next) {
   res.statusCode = 401;
 
   res.render('products', {
-    title: 'Products',
+    title: 'Products from AppServer1',
     messages: errors
   });
 
@@ -61,7 +61,7 @@ router.get('/List', helpers.loginChecker, function (req, res, next) {
   db.query(sqlQuery, function (err, results, fields) {
 
     res.render('List', {
-      title: 'Register - Products',
+      title: 'Product Catalog',
       authorised: req.session.authorised,
       //fname: req.session.fname,
       products: results
